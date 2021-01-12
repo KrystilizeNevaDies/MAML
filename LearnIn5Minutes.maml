@@ -1,0 +1,61 @@
+// Maml is a config and data storage file format designed for simplicity and expandibility.
+
+// Single line comment
+
+/*
+Multi
+Line
+Comment
+*/
+
+// Declaring Variables
+
+SomeValue = "A Value"
+SomeString = "Hey"
+SomeBoolean = true
+SomeNumber = 243.3
+SomeHexNumber = 0xEE
+SomeBinaryNumber = 0b011011
+
+// Declaing Tables
+
+Table [
+  Key = SomeValue
+  AnotherKey = "Another Value"
+]
+
+// Table.Key
+// Resolves to "A Value"
+
+// Table.AnotherKey
+// Resolves to "Another Value"
+
+// Arrays are just tables without specified keys
+Array [
+  "Zeroth"
+  "First"
+  "Second"
+  "Third"
+  "Forth"
+]
+
+// Array.0
+// Resolves to "Zeroth"
+
+// Dynamic strings are possible with this syntax:
+
+Index = "Key"
+TableFirstKey = Table.{Index}
+// Resolves to Table.Key, which resolves to "A Value"
+
+// These can also be nested
+AnotherIndex = "Some"
+SomeKey = "AnotherKey"
+TableSecondKey = Table.{{AnotherIndex}Key}
+/*
+Table.{{AnotherIndex}Key} resolves to Table.{SomeKey}
+Table.{SomeKey} resolves to Table.AnotherKey
+Table.AnotherKey resolves to "Another Value"
+
+So Table.{{AnotherIndex}Key} is equivalent to "Another Value"
+*/
