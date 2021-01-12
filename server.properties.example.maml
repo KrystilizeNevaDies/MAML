@@ -1,0 +1,77 @@
+// Minecraft server properties
+// Fri Jul 31 21:07:23 EDT 2020
+
+Debug = false
+
+Networking [
+  Connection [
+    ServerPort = 25565
+    ServerIP = "0.0.0.0"
+    MaxPlayers = 20
+    OnlineMode = true
+    MOTD = "A Minecraft Server"
+  ]
+  
+  Rcon [
+    RconPort = 25575
+    RconPassword = ""
+    EnableRcon = false
+  ]
+  
+  ResourcePack [
+    ResourcePack = ""
+    ResourcePacksha1 = ""
+  ]
+  
+  QueryPort = 25565
+  EnableQuery = false
+  SnooperEnabled = true
+  NetworkCompressionThreshold = 256
+  WhiteList = false
+  EnforceWhitelist = false
+  PreventProxyConnections = false
+  UseNativeTransport = true
+  EnableJmxMonitoring = false
+  EnableStatus = true
+]
+
+World [
+  Generation [
+    GeneratorSettings = ""
+    LevelType = "default"
+    LevelName = "world"
+    LevelSeed = ""
+    GenerateStructures = true
+  ]
+  Spawning [
+    SpawnProtection = 16
+    SpawnMonsters = true
+    SpawnNpcs = true
+    SpawnAnimals = true
+  ]
+  
+  MaxTickTime = 60000
+  AllowNether = true
+  Pvp = true
+  MaxWorldSize = 29999984
+  MaxBuildHeight = 256
+]
+
+Permissions [
+  ForceGamemode = false
+  EnableCommandBlock = false
+  BroadcastConsoleToOps = true
+  BroadcastRconToOps = true
+  OpPermissionLevel = 4
+  FunctionPermissionLevel = 2
+]
+
+Player [
+  Gamemode = "survival"
+  PlayerIdleTimeout = 0
+  Difficulty = easy
+  EntityBroadcastRangePercentage = 100
+  Hardcore = false
+  AllowFlight = false
+  ViewDistance = 10
+]
