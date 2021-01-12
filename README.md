@@ -107,3 +107,29 @@ Welcome to App version 4.2.3!
 
 We hope you enjoy this application.
 ```
+
+You may also nest embedded strings into other embedded strings like so:
+```
+Config [
+  1 = "Apple"
+  2 = "Banana"
+  Version = 2
+]
+VersioningMessage = `Hey there,
+
+Welcome to the big {Config.{Version}}!
+
+We hope you enjoy your usage.`
+```
+
+This code snippet will render the `VersioningMessage` variable to be:
+```
+Hey there,
+
+Welcome to the big Banana!
+
+We hope you enjoy this application.
+```
+
+## Special Characters
+The special characters in maml can all be escaped with the `\` character, which is also defined as a special character.
