@@ -81,7 +81,7 @@ This syntax automatically assigns `Numbers` as keys starting at 0 to each value
 ## Dynamic Strings
 `Strings`/`Numbers`/`Booleans` are embeddable in other strings' definitions
 
-When an index to a `String`/`Number`/`Boolean` is included in a string with the `{Pointer}` syntax, it is rendered in its definition.
+When an index to a `String`/`Number`/`Boolean` is included in a string with the `<Pointer>` syntax, it is rendered in its definition.
 
 Lets look at some examples:
 
@@ -94,7 +94,7 @@ Config {
 
 VersioningMessage = `Hey there,
 
-Welcome to {Config.ApplicationName} version {Config.Version}!
+Welcome to <Config.ApplicationName> version <Config.Version>!
 
 We hope you enjoy your usage.`
 ```
@@ -117,7 +117,7 @@ Config {
 }
 VersioningMessage = `Hey there,
 
-Welcome to the big {Config.{Version}}!
+Welcome to the big <Config.<Version>>!
 
 We hope you enjoy your usage.`
 ```
