@@ -51,27 +51,27 @@ They can be represented in a variety of formats:
 
 They are represented with the following syntax:
 ```
-TableName [
+TableName {
     Key = Value
-]
+}
 ```
 
 `Table` values may be indexed like so:
 ```
-Settings [
+Settings {
     Port = 80
     HttpPort = 443
-]
+}
 
 ServerPort = Settings.Port
 ```
 
 `Tables` may also be represented with this syntax (Called the array syntax):
 ```
-NumberStrings [
+NumberStrings {
     "zero"
     "one"
-]
+}
 
 NumberOneString = NumberStrings.1
 ```
@@ -87,10 +87,10 @@ Lets look at some examples:
 
 This file:
 ```
-Config [
+Config {
   Version = "4.2.3"
   ApplicationName = "App"
-]
+}
 
 VersioningMessage = `Hey there,
 
@@ -110,11 +110,11 @@ We hope you enjoy this application.
 
 You may also nest embedded strings into other embedded strings like so:
 ```
-Config [
+Config {
   1 = "Apple"
   2 = "Banana"
   Version = 2
-]
+}
 VersioningMessage = `Hey there,
 
 Welcome to the big {Config.{Version}}!
